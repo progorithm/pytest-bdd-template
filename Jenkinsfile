@@ -1,12 +1,8 @@
 node {
-    agent { label 'dockerserver' }
     def app
 
-    stage('Clone repository') {
-        checkout scm
-    }
-
     stage('Build image') {
+        checkout scm
         app = docker.build("andraspalinkas/dummy-test-automation")
     }
 
