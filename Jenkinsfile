@@ -3,7 +3,7 @@ node {
 
     stage('Build image') {
         checkout scm
-        app = docker.build("andraspalinkas/dummy-test-automation")
+        app = docker.build 'andraspalinkas/dummy-test-automation'
     }
 
     stage('Push image') {
